@@ -2,22 +2,28 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Class Method</title>
+    <title>Class Property</title>
 </head>
 <body>
 <script>
 
     class Person {
         constructor(name) {
-            // kode apapun
-            console.info(`Membuat Person ${name}`);
+            this.name = name;
+        }
+
+        sayHello(name) {
+            console.info(`Hello ${name}, my name is ${this.name}`);
         }
     }
 
     const roziqin = new Person("Roziqin");
     console.info(roziqin);
+    roziqin.sayHello("Joko")
 
     const ginting = new Person("Ginting");
+    console.info(ginting);
+    ginting.sayHello("Joko")
 
 </script>
 </body>
