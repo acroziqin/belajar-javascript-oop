@@ -7,16 +7,17 @@
 <body>
 <script>
 
-  class Person {
+    class Person {
+        constructor(name) {
+            // kode apapun
+            console.info(`Membuat Person ${name}`);
+        }
+    }
 
-  }
+    const roziqin = new Person("Roziqin");
+    console.info(roziqin);
 
-  Person.prototype.sayHello = function () {
-
-  }
-
-  const roziqin = new Person()
-  console.info(roziqin);
+    const ginting = new Person("Ginting");
 
 </script>
 </body>
