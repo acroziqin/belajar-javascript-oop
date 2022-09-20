@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Prototype</title>
+</head>
+<body>
+<script>
+
+    function Person(firstName, lastName) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.sayHello = function (name) {
+            console.info(`Hello ${name}, my name is ${this.firstName}`);
+        }
+    }
+
+    Person.prototype.sayBye = function () {
+        console.info("Good Bye");
+    }
+
+    Person.prototype.run = function () {
+        console.info(`${this.firstName} is running`);
+    }
+
+    const roziqin = new Person("Achmad", "Roziqin");
+    roziqin.sayBye = function () {
+        console.info("Sampa Jumpa");
+    }
+
+    const ginting = new Person("Ginting", "Setiawan");
+
+    console.log(roziqin);
+    console.log(ginting);
+
+    roziqin.sayBye()
+    roziqin.run()
+
+</script>
+</body>
+</html>
